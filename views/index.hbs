@@ -1,27 +1,23 @@
 <p> Hello World </p>
 
 <div class="wrapper">
-        <h1>Message Test</h1>
-        <form id="connection-information-form">
-           <b>Input Message:</b>
-           <input id="customMsg" type="text" name="customMsg"><br>
-           <!-- <b>Port:</b>
-           <input id="port" type="text" name="port" value="8080"><br>
-           <b>Topic:</b>
-           <input id="topic" type="text" name="topic" value="#"><br><br> -->
-           <input type="button" onclick="startConnect()" value="Send Message">
-           <!-- <input type="button" onclick="startDisconnect()" value="Disconnect"> -->
-        </form>
-        <div id="messages"></div>
-     </div>
+         <h1>Send Message Demo</h1>
+         <form id="msgToArduino">
+            <b>Message:</b>
+            <input id="customMsg" type="text" name="customMsg" value=""><br><br>
+            <!-- On button click, trigger sendData function -->
+            <input type="button" onclick="sendData()" value="Send Message">
+         </form>
 
-<!-- <button class="sizedButton1 btn m-2 btn-primary" onclick="redClicked()">RED</button> -->
-
+<!-- Socket.io -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script>
+// Initialise socket.io client side connection
 var socket = io();
-function startConnect() {
-  socket.emit('startConnect');
-  console.log("Sent red");
+  function sendData() {
+    // Get text input from form
+    var data = document.getElementById('customMsg').value;
+    // Trigger server side sendMsg function and send 'data'
+    socket.emit('sendMsg', data)
 }
 </script>
