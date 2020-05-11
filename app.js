@@ -28,7 +28,7 @@ app.use("/", require("./routes"));
 /* ARDUINO CODE--------------------------------------------------------------------------*/
 
 //Setup variables for the MQTT communication
-var MQTT_TOPIC = "/test";
+var MQTT_TOPIC = "/location";
 //MQTT Token
 var MQTT_ADDR = "mqtt://763f6861:1362154b898a179a@broker.shiftr.io";
 //Shiftr's port
@@ -50,7 +50,7 @@ io.on("connection", function(client) {
   client.on("sendMsg", function(data) {
     console.log(data);
     // Publish custom message to MQTT
-    mqttClient.publish("test", data);
+    mqttClient.publish("messages", data);
   });
 });
 /* END OF ARDUINO -----------------------------------------------------------------------*/
