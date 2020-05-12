@@ -1,7 +1,10 @@
-<p> Hello World </p>
+<section id ="coverPage">
+  <h1> This is a cover page </h1>
+</section>
 
+<section id ="sendMessage">
 <div class="wrapper">
-         <h1>Send Message Demo</h1>
+         <h1>Send Message to Arduino</h1>
          <form id="msgToArduino">
             <b>Message:</b>
             <input id="customMsg" type="text" name="customMsg" value=""><br><br>
@@ -21,3 +24,25 @@ var socket = io();
     socket.emit('sendMsg', data)
 }
 </script>
+</section>
+
+<section id ="seeLocation">
+  <div id="googleMap"></div>
+
+  <script>
+
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(55.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var locationMarker = new google.maps.Marker({
+         map: map
+       });
+}
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVd-gRAyjmXrvpVJAyFOFpvsxgDKUL7hE&callback=myMap"></script>
+</section>

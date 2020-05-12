@@ -1,0 +1,38 @@
+/* Default Styling ------------------------------------------- */
+html, body{
+  /* Makes page take up full screen size */
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+
+/* Cover Page Styling ------------------------------------------- */
+#coverPage{
+  padding-top: 10vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+}
+
+/* Send Message Page Styling ------------------------------------------- */
+#sendMessage{
+  padding-top: 10vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: pink;
+}
+
+/* Map Location Styling ------------------------------------------- */
+#seeLocation{
+  padding-top: 10vh;
+  height: 90vh;
+  width: 100vw;
+  background-color: grey;
+}
+
+#googleMap{
+  height: 50vh;
+  width: 50vw;
+}

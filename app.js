@@ -53,6 +53,14 @@ io.on("connection", function(client) {
     mqttClient.publish("messages", data);
   });
 });
+
+mqttClient.on("message", function(topic, message) {
+  var jsonObj = JSON.parse(message);
+  latVal = jsonObj.Latitude;
+  lonVal = jsonObj.Longitude;
+  // console.log("Latitude:" + latVal + "Longitude:" + lonVal);
+  
+});
 /* END OF ARDUINO -----------------------------------------------------------------------*/
 
 http.listen(port, () => {
