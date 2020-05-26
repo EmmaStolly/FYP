@@ -66,6 +66,9 @@ void setup() {
 //  Set to landscape
    tft.setRotation(1);
   tft.setTextSize(8);
+  tft.setTextColor(ILI9341_RED);
+  tft.fillScreen(ILI9341_WHITE);
+  
 }
 
 void connect(){
@@ -79,10 +82,10 @@ void connect(){
 
   Serial.println("\nconnected to mqtt!");
 //  Subscribe to MQTT topic
-  MClient.subscribe("/messages");
+    MClient.subscribe("messages");
 //  Trigggered when message received from subscribed topic
   MClient.onMessage(messageReceived);
-}
+ }
 
 void messageReceived(String &topic, String &payload) {
   if (topic == "messages"){
@@ -104,6 +107,7 @@ void loop() {
    if (!client.connected()) {
     connect();
   }
+
 
 //Send GPS data to web app ------------------------------------------
   bool newData = false;
@@ -142,7 +146,7 @@ delay(3000);
 //Publish to "/topic", GPS data
 MClient.publish("/location", locationPayload);
 }
-  
+
 }
 
 //Wifi Connection Info ------------------------------------------
