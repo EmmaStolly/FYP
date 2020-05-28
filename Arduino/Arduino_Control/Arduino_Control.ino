@@ -142,7 +142,7 @@ String locationPayload = "{\"Latitude\":" + latitude + ",\"Longitude\":" + longi
 //Serial.println(locationPayload); //Uncomment for GPS JSON in serial monitor
 
 //Push GPS every 3 seconds (Can be changed)
-delay(3000);
+delay(10000);
 //Publish to "/topic", GPS data
 MClient.publish("/location", locationPayload);
 }

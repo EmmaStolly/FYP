@@ -11,11 +11,21 @@
             <!-- On button click, trigger sendData function -->
             <input type="button" onclick="sendData()" value="Send Message">
          </form>
+</section>
+
+<section id ="seeLocation">
+  <h3>Live Location of Device</h3>
+  <!--The div element for the map -->
+  <div id="map"></div>
+  <p> Map updates every 10 seconds </p>
 
 <!-- Socket.io -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script>
 // Initialise socket.io client side connection
+var lat;
+var lon;
+
 var socket = io();
   function sendData() {
     // Get text input from form
@@ -23,26 +33,28 @@ var socket = io();
     // Trigger server side sendMsg function and send 'data'
     socket.emit('sendMsg', data)
 }
-</script>
-</section>
 
-<section id ="seeLocation">
-  <div id="googleMap"></div>
+socket.on('updateLocation', (latVal, lonVal) => {
+console.log("Latitude:" + latVal + "Longitude:" + lonVal);
+deviceLat = latVal;
+deviceLon = lonVal;
+initMap(deviceLat,deviceLon);
+});
 
-  <script>
-
-function myMap() {
-var mapProp= {
-  center:new google.maps.LatLng(55.508742,-0.120850),
-  zoom:5,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var locationMarker = new google.maps.Marker({
-         map: map
-       });
+// Initialize and add the map
+function initMap(deviceLat, deviceLon) {
+// The location of Uluru
+// var uluru = {lat: -25.344, lng: 131.036};
+var arduinoLocation = {lat: deviceLat, lng: deviceLon};
+// The map, centered at Uluru
+var map = new google.maps.Map(
+  document.getElementById('map'), {zoom: 15, center: arduinoLocation});
+// The marker, positioned at Uluru
+var marker = new google.maps.Marker({position: arduinoLocation, map: map});
 }
 
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVd-gRAyjmXrvpVJAyFOFpvsxgDKUL7hE&callback=myMap"></script>
-</section>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyL7KSlLjfhj_8wb3MDTdh49EX1hr-zW8&callback=initMap">
+</script>

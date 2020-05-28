@@ -59,8 +59,11 @@ mqttClient.on("message", function(topic, message) {
   latVal = jsonObj.Latitude;
   lonVal = jsonObj.Longitude;
   // console.log("Latitude:" + latVal + "Longitude:" + lonVal);
-  
+      io.emit("updateLocation", latVal, lonVal);
+      // io.emit("updateLon", lonVal);
 });
+
+
 /* END OF ARDUINO -----------------------------------------------------------------------*/
 
 http.listen(port, () => {
