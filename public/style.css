@@ -5,34 +5,136 @@ html, body{
   min-width: 100%;
   margin: 0;
   padding: 0;
-  background-color: red;
+  background-color: black;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.bg-white{
+  background-color: #E0E0E0;
+}
+
+.bg-black{
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+p, h1, h2, h3, h4, h5, h6{
+  color: #16C700;
+}
+
+h1{
+  font-size: 70px;
+}
+
+p{
+  font-size: 20px;
+}
+
+a{
+  line-height: 40%;
+  font-size: 30px;
+}
+
+.blackFont{
+  color: black;
 }
 
 /* Cover Page Styling ------------------------------------------- */
 #coverPage{
-  padding-top: 10vh;
   height: 100vh;
-  width: 100vw;
-  background-color: blue;
+  width: 100%;
 }
-
 /* Send Message Page Styling ------------------------------------------- */
 #sendMessage{
-  padding-top: 10vh;
   height: 100vh;
-  width: 100vw;
-  background-color: pink;
+  width: 100%;
+  background-color: black;
 }
 
+#msgTab{
+  background-color: white;
+  height: 60vh;
+  width: 40vw;
+  box-shadow: 5px 10px #888888;
+}
+
+  #msgTabHeader{
+    width: 100%;
+    height: 10%;
+    background-color: #E0E0E0;
+  }
+  #msgTabHeader img{
+    height: 100%;
+    width: 10%;
+  }
+
+  #msgTabContent{
+    height: 90%;
+  }
 /* Map Location Styling ------------------------------------------- */
 #seeLocation{
-  padding-top: 10vh;
-  height: 90vh;
-  width: 100vw;
+  height: 100vh;
+  /* width: 100vw; */
   background-color: grey;
 }
 
 #map{
   height: 50vh;
   width: 50vw;
+}
+
+
+/* Mobile Responsiveness -------------------------------------------
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  a{
+    line-height: 80%;
+  }
+
+  h1{
+    font-size: 50px;
+  }
+
+  p{
+    font-size: 14px;
+  }
+
+  #coverNav{
+    margin-top: 10%;
+  }
+
+  #msgNav a{
+    line-height: 40%;
+  }
+
+  #msgTab{
+    height: 40vh;
+    width: 80vw;
+  }
+
+  #msgTabContent h2{
+    font-size: 18px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

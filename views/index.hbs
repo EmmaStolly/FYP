@@ -1,16 +1,44 @@
-<section id ="coverPage">
-  <h1> This is a cover page </h1>
+<section id ="coverPage" class ="bg-black">
+  <div class = "d-flex justify-content-center h-100 align-items-center">
+  <div> <h1 class="text-center">Welcome To Invasion 2.0...</h1> <div>
+<!-- <div id="coverNav" class ="d-flex flex-row justify-content-center">
+   <a id="navLink1" href="#sendMessage"><p class ="pr-5 text-center">Send Message</p></a>
+    <a id="navLink1" href="#seeLocation"><p class="text-center">GPS Tracker</p></a>
+     <a id="navLink1" href="#blog"><p class ="pl-5 text-center">Development Blog</p></a>
+ </div> -->
+</div>
 </section>
 
-<section id ="sendMessage">
-<div class="wrapper">
-         <h1>Send Message to Arduino</h1>
-         <form id="msgToArduino">
-            <b>Message:</b>
-            <input id="customMsg" type="text" name="customMsg" value=""><br><br>
-            <!-- On button click, trigger sendData function -->
-            <input type="button" onclick="sendData()" value="Send Message">
-         </form>
+<section id ="sendMessage" class ="d-flex flex-column justify-content-center align-items-center">
+  <div>
+  <h2 class="text-center"> C:\Invasion2.0> Send Message to Device...</h2>
+  <!-- <div class ="d-flex flex-column">
+      <div id="msgNav" class ="d-flex flex-column justify-content-center align-items-center">
+    <h4 class="text-center">C:\Invasion2.0> Navigation:</h4>
+  <a id="navLink1" href="#sendMessage"><p class ="text-center"> >Send Message</p></a>
+   <a id="navLink1" href="#seeLocation"><p class ="text-center"> >GPS Tracker</p></a>
+    <a id="navLink1" href="#blog"><p class ="text-center"> >Development Blog</p></a>
+  </div>
+</div> -->
+</div>
+  <!-- <p> >Type message here... </p> -->
+  <div class = "mt-5">
+  <div id ="msgTab">
+    <div id ="msgTabHeader" class= "d-flex justify-content-end">
+       <img src ="/img/closeButton.png">
+    </div>
+<div id ="msgTabContent" class ="d-flex justify-content-center align-items-center">
+    <form id="msgToArduino">
+      <h2 class ="blackFont"> SendMessageToInvasion.exe </h2>
+       <b>Message:</b>
+       <input id="customMsg" type="text" name="customMsg" value=""><br><br>
+       <!-- On button click, trigger sendData function -->
+       <input type="button" onclick="sendData()" value="Send Message">
+    </form>
+  </div>
+</div>
+</div>
+
 </section>
 
 <section id ="seeLocation">
