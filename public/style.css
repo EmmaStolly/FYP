@@ -39,6 +39,9 @@ a{
   color: black;
 }
 
+#mainNav{
+  height: 10vh;
+}
 /* Cover Page Styling ------------------------------------------- */
 #coverPage{
   height: 100vh;
@@ -73,16 +76,37 @@ a{
   }
 /* Map Location Styling ------------------------------------------- */
 #seeLocation{
-  height: 100vh;
+  padding-top: 10vh;
+  height: 90vh;
   /* width: 100vw; */
-  background-color: grey;
+  background-color: black;
 }
+
+#gpsTab{
+  background-color: white;
+  height: 60vh;
+  width: 40vw;
+  box-shadow: 5px 10px #888888;
+}
+
+  #gpsTabHeader{
+    width: 100%;
+    height: 10%;
+    background-color: #E0E0E0;
+  }
+  #gpsTabHeader img{
+    height: 100%;
+    width: 10%;
+  }
+
+  #gpsTabContent{
+    height: 90%;
+  }
 
 #map{
-  height: 50vh;
-  width: 50vw;
+  height: 70%;
+  width: 80%;
 }
-
 
 /* Mobile Responsiveness -------------------------------------------
 

@@ -12,24 +12,15 @@
 <section id ="sendMessage" class ="d-flex flex-column justify-content-center align-items-center">
   <div>
   <h2 class="text-center"> C:\Invasion2.0> Send Message to Device...</h2>
-  <!-- <div class ="d-flex flex-column">
-      <div id="msgNav" class ="d-flex flex-column justify-content-center align-items-center">
-    <h4 class="text-center">C:\Invasion2.0> Navigation:</h4>
-  <a id="navLink1" href="#sendMessage"><p class ="text-center"> >Send Message</p></a>
-   <a id="navLink1" href="#seeLocation"><p class ="text-center"> >GPS Tracker</p></a>
-    <a id="navLink1" href="#blog"><p class ="text-center"> >Development Blog</p></a>
-  </div>
-</div> -->
 </div>
-  <!-- <p> >Type message here... </p> -->
   <div class = "mt-5">
   <div id ="msgTab">
-    <div id ="msgTabHeader" class= "d-flex justify-content-end">
+    <div id ="msgTabHeader" class= "d-flex justify-content-between align-items-center">
+            <h4 class ="blackFont ml-2"> SendMessageToDevice.exe </h4>
        <img src ="/img/closeButton.png">
     </div>
 <div id ="msgTabContent" class ="d-flex justify-content-center align-items-center">
     <form id="msgToArduino">
-      <h2 class ="blackFont"> SendMessageToInvasion.exe </h2>
        <b>Message:</b>
        <input id="customMsg" type="text" name="customMsg" value=""><br><br>
        <!-- On button click, trigger sendData function -->
@@ -42,10 +33,24 @@
 </section>
 
 <section id ="seeLocation">
+
+  <h2 class="text-center"> C:\Invasion2.0> Live GPS of Device...</h2>
+
+  <div id ="gpsTab">
+    <div id ="gpsTabHeader" class= "d-flex justify-content-between align-items-center">
+            <h4 class ="blackFont ml-2"> LocationTrackingDevice.exe </h4>
+       <img src ="/img/closeButton.png">
+    </div>
+<div id ="gpsTabContent" class ="d-flex flex-column justify-content-center align-items-center">
+
   <h3>Live Location of Device</h3>
   <!--The div element for the map -->
   <div id="map"></div>
   <p> Map updates every 10 seconds </p>
+
+  </div>
+</div>
+
 
 <!-- Socket.io -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
