@@ -1,7 +1,7 @@
 //Libraries ------------------------------------------
 #include <SPI.h>
 #include <WiFiNINA.h>
-#include <TinyGPS.h>
+//#include <TinyGPS.h>
 #include <MQTT.h>
 #include <avr/dtostrf.h>
 #include "Adafruit_GFX.h"
@@ -26,13 +26,13 @@ Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_MOSI, TFT_CLK, TFT_R
 
 WiFiClient client;
 MQTTClient MClient;
-TinyGPS gps;
+//TinyGPS gps;
 
 void setup() {
   //Initialize serial and wait for port to open:
   Serial.begin(9600);
 //  Initialise RX TX Serial
-  Serial1.begin(9600);
+//  Serial1.begin(9600);
 
 //  WiFi Connection ------------------------------------------
   while (!Serial) {
@@ -67,7 +67,7 @@ void setup() {
    tft.setRotation(1);
   tft.setTextSize(8);
   tft.setTextColor(ILI9341_RED);
-  tft.fillScreen(ILI9341_WHITE);
+  tft.fillScreen(ILI9341_RED);
   
 }
 
@@ -83,20 +83,24 @@ void connect(){
   Serial.println("\nconnected to mqtt!");
 //  Subscribe to MQTT topic
     MClient.subscribe("messages");
+    MClient.subscribe("font");
 //  Trigggered when message received from subscribed topic
   MClient.onMessage(messageReceived);
  }
 
 void messageReceived(String &topic, String &payload) {
   if (topic == "messages"){
-
 //    Sending message to TFT LCD ------------------------------------------
 //    Clear previous message
-    tft.fillScreen(ILI9341_WHITE);
+//    tft.fillScreen(ILI9341_WHITE);
 //    Reset to line 1 of TFT
     tft.setCursor(0, 0);
 //    Print message to TFT
       tft.println(payload);
+      Serial.println(payload);
+  }
+  if (topic == "font/blue"){
+    tft.setTextColor(ILI9341_BLUE);
   }
 }
 
@@ -106,6 +110,7 @@ void loop() {
   MClient.loop();
    if (!client.connected()) {
     connect();
+    MClient.onMessage(messageReceived);
   }
 
 
@@ -114,38 +119,38 @@ void loop() {
   unsigned long chars;
   unsigned short sentences, failed;
 
-    // For one second we parse GPS data and report some key values
-  for (unsigned long start = millis(); millis() - start < 1000;)
-  {
-    while (Serial1.available())
-    {
-      char c = Serial1.read();
-      // Serial.write(c); // uncomment for raw GPS data
-//      Looking for incoming data
-      if (gps.encode(c))
-        newData = true;
-    }
-  }
+//    // For one second we parse GPS data and report some key values
+//  for (unsigned long start = millis(); millis() - start < 1000;)
+//  {
+//    while (Serial1.available())
+//    {
+//      char c = Serial1.read();
+//      // Serial.write(c); // uncomment for raw GPS data
+////      Looking for incoming data
+//      if (gps.encode(c))
+//        newData = true;
+//    }
+//  }
 
-  if (newData)
-  {
-    float flat, flon;
-    unsigned long age;
-    
-    gps.f_get_position(&flat, &flon, &age);
-//    Convert GPS data into string
-    String latitude = String(flat,6); 
-    String longitude = String(flon,6); 
-//Serial.println(latitude+";"+longitude); //Uncomment to see GPS data in serial monitor
-//Convert location data into a JSON format
-String locationPayload = "{\"Latitude\":" + latitude + ",\"Longitude\":" + longitude + "}";
-//Serial.println(locationPayload); //Uncomment for GPS JSON in serial monitor
-
-//Push GPS every 3 seconds (Can be changed)
-delay(10000);
-//Publish to "/topic", GPS data
-MClient.publish("/location", locationPayload);
-}
+//  if (newData)
+//  {
+//    float flat, flon;
+//    unsigned long age;
+//    
+//    gps.f_get_position(&flat, &flon, &age);
+////    Convert GPS data into string
+//    String latitude = String(flat,6); 
+//    String longitude = String(flon,6); 
+////Serial.println(latitude+";"+longitude); //Uncomment to see GPS data in serial monitor
+////Convert location data into a JSON format
+//String locationPayload = "{\"Latitude\":" + latitude + ",\"Longitude\":" + longitude + "}";
+////Serial.println(locationPayload); //Uncomment for GPS JSON in serial monitor
+//
+////Push GPS every 3 seconds (Can be changed)
+//delay(10000);
+////Publish to "/topic", GPS data
+//MClient.publish("/location", locationPayload);
+//}
 
 }
 

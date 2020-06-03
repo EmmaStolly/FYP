@@ -162,3 +162,28 @@ a{
 @media only screen and (min-width: 1200px) {
 
 }
+
+.typewriter {
+	/* width: 18ch; */
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 4px solid black;
+	animation: cursor 1s step-start infinite, text 2s steps(18),
+  blink-caret .75s step-end infinite;
+}
+
+@keyframes cursor {
+	0%, 100% { border-color: black; }
+	50% { border-color: transparent; }
+}
+
+@keyframes text {
+	0% { width: 0; }
+	100% { width: 29ch; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #16C700; }
+}

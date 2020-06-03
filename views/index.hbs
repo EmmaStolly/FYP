@@ -1,6 +1,7 @@
 <section id ="coverPage" class ="bg-black">
   <div class = "d-flex justify-content-center h-100 align-items-center">
-  <div> <h1 class="text-center">Welcome To Invasion 2.0...</h1> <div>
+  <div> <h1 class="text-center typewriter">Welcome To Invasion 2.0...</h1> <div>
+  <!-- <h2 class = "typewriter2"> Click to begin... </h2> -->
 <!-- <div id="coverNav" class ="d-flex flex-row justify-content-center">
    <a id="navLink1" href="#sendMessage"><p class ="pr-5 text-center">Send Message</p></a>
     <a id="navLink1" href="#seeLocation"><p class="text-center">GPS Tracker</p></a>
@@ -11,10 +12,11 @@
 
 <section id ="sendMessage" class ="d-flex flex-column justify-content-center align-items-center">
   <div>
-  <h2 class="text-center"> C:\Invasion2.0> Send Message to Device...</h2>
+  <h2 class="text-center"> C:\Invasion2.0> Edit Device Display</h2>
 </div>
-  <div class = "mt-5">
-  <div id ="msgTab">
+  <div class = "mt-5 d-flex flex-row">
+
+  <div id ="msgTab" class="mr-5">
     <div id ="msgTabHeader" class= "d-flex justify-content-between align-items-center">
             <h4 class ="blackFont ml-2"> SendMessageToDevice.exe </h4>
        <img src ="/img/closeButton.png">
@@ -28,15 +30,110 @@
     </form>
   </div>
 </div>
+
+<div id ="msgTab">
+  <div id ="msgTabHeader" class= "d-flex justify-content-between align-items-center">
+          <h4 class ="blackFont ml-2"> CustomiseDevice.exe </h4>
+     <img src ="/img/closeButton.png">
+  </div>
+<div id ="msgTabContent" class ="d-flex justify-content-center align-items-center">
+
+<div class ="d-flex flex-column">
+<div>
+<button class="btn btn-primary" onclick="redFont()">Red Font</button>
+<button class="btn btn-primary" onclick="orangeFont()">orangeFont</button>
+<button class="btn btn-primary" onclick="yellowFont()">YellowFont</button>
+<button class="btn btn-primary" onclick="greenFont()">Green Font</button>
+<button class="btn btn-primary" onclick="blueFont()">Blue Font</button>
+<button class="btn btn-primary" onclick="pinkFont()">Pink Font</button>
+<button class="btn btn-primary" onclick="purpleFont()">Purple Font</button>
+</div>
+
+<div>
+<button class="btn btn-primary" onclick="redBg()">Red Bg</button>
+<button class="btn btn-primary" onclick="orangeBg()">orangeBg</button>
+<button class="btn btn-primary" onclick="yellowBg()">YellowBg</button>
+<button class="btn btn-primary" onclick="greenBg()">Green Bg</button>
+<button class="btn btn-primary" onclick="blueBg()">Blue Bg</button>
+<button class="btn btn-primary" onclick="pinkBg()">Pink Bg</button>
+<button class="btn btn-primary" onclick="purpleBg()">Purple Bg</button>
+</div>
+</div>
+
+</div>
+</div>
+<!-- Socket.io Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script>
+var socket = io();
+function redFont() {
+  socket.emit('redFont');
+  console.log("Sent Red Font");
+}
+function orangeFont() {
+  socket.emit('orangeFont');
+  console.log("Sent Orange Font");
+}
+function yellowFont() {
+  socket.emit('yellowFont');
+  console.log("Sent Yellow Font");
+}
+function greenFont() {
+  socket.emit('greenFont');
+  console.log("Sent Green Font");
+}
+function blueFont() {
+  socket.emit('blueFont');
+  console.log("Sent Blue Font");
+}
+function pinkFont() {
+  socket.emit('pinkFont');
+  console.log("Sent Pink Font");
+}
+function purpleFont() {
+  socket.emit('purpleFont');
+  console.log("Sent Purple Font");
+}
+
+function redBg() {
+  socket.emit('redBg');
+  console.log("Sent Red Bg");
+}
+function orangeBg() {
+  socket.emit('orangeBg');
+  console.log("Sent Orange Bg");
+}
+function yellowBg() {
+  socket.emit('yellowBg');
+  console.log("Sent Yellow Bg");
+}
+function greenBg() {
+  socket.emit('greenBg');
+  console.log("Sent Green Bg");
+}
+function blueBg() {
+  socket.emit('blueBg');
+  console.log("Sent Blue Bg");
+}
+function pinkBg() {
+  socket.emit('pinkBg');
+  console.log("Sent Pink Bg");
+}
+function purpleBg() {
+  socket.emit('purpleBg');
+  console.log("Sent Purple Bg");
+}
+</script>
+
 </div>
 
 </section>
 
-<section id ="seeLocation">
+<section id ="seeLocation" class= "d-flex flex-column align-items-center">
 
   <h2 class="text-center"> C:\Invasion2.0> Live GPS of Device...</h2>
 
-  <div id ="gpsTab">
+  <div id ="gpsTab" class ="mt-5">
     <div id ="gpsTabHeader" class= "d-flex justify-content-between align-items-center">
             <h4 class ="blackFont ml-2"> LocationTrackingDevice.exe </h4>
        <img src ="/img/closeButton.png">
@@ -52,8 +149,7 @@
 </div>
 
 
-<!-- Socket.io -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<!-- Server to Client Sending GPS Data via Socket.io  -->
 <script>
 // Initialise socket.io client side connection
 var lat;

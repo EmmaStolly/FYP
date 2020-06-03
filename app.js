@@ -52,6 +52,51 @@ io.on("connection", function(client) {
     // Publish custom message to MQTT
     mqttClient.publish("messages", data);
   });
+
+  client.on("redFont", function(data) {
+   mqttClient.publish("custom/font/red");
+ });
+ client.on("orangeFont", function(data) {
+  mqttClient.publish("custom/font/orange");
+});
+client.on("yellowFont", function(data) {
+ mqttClient.publish("custom/font/yellow");
+});
+client.on("greenFont", function(data) {
+ mqttClient.publish("custom/font/green");
+});
+client.on("blueFont", function(data) {
+ mqttClient.publish("custom/font/blue");
+});
+client.on("pinkFont", function(data) {
+ mqttClient.publish("custom/font/pink");
+});
+client.on("purpleFont", function(data) {
+ mqttClient.publish("custom/font/purple");
+});
+
+client.on("redBg", function(data) {
+ mqttClient.publish("custom/background/red");
+});
+client.on("orangeBg", function(data) {
+mqttClient.publish("custom/background/orange");
+});
+client.on("yellowBg", function(data) {
+mqttClient.publish("custom/background/yellow");
+});
+client.on("greenBg", function(data) {
+mqttClient.publish("custom/background/green");
+});
+client.on("blueBg", function(data) {
+mqttClient.publish("custom/background/blue");
+});
+client.on("pinkBg", function(data) {
+mqttClient.publish("custom/background/pink");
+});
+client.on("purpleBg", function(data) {
+mqttClient.publish("custom/background/purple");
+});
+
 });
 
 mqttClient.on("message", function(topic, message) {
