@@ -39,16 +39,81 @@ a{
   color: black;
 }
 
-#mainNav{
+i:hover{
+  color: red;
+}
+
+
+.nav{
   height: 10vh;
+}
+
+.navLink{
+  font-size: 20px;
+  color: #16C700;
+}
+.navLink:hover{
+  color: red;
 }
 /* Cover Page Styling ------------------------------------------- */
 #coverPage{
   height: 100vh;
   width: 100%;
 }
+
+.typewriter {
+	/* width: 18ch; */
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 4px solid black;
+	animation: cursor 1s step-start infinite, text 2s steps(18),
+  blink-caret .75s step-end infinite;
+}
+
+@keyframes cursor {
+	0%, 100% { border-color: black; }
+	50% { border-color: transparent; }
+}
+
+@keyframes text {
+	0% { width: 0; }
+	100% { width: 20ch; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #16C700; }
+}
+
+
+/* Instructions/About Page Styling ------------------------------------------- */
+#instructions{
+padding-top: 10vh;
+height: 100vh;
+width: 100%;
+background-color: black;
+}
+.ref{
+  font-size: 20px;
+  color: red;
+}
+.ref:hover{
+  color: red;
+}
+#instructions p{
+  width: 90%;
+}
+
+#instructions img{
+  height: 35vh;
+  width: 15vw;
+  transform: rotate(-90deg);
+}
+
 /* Send Message Page Styling ------------------------------------------- */
 #sendMessage{
+  padding-top: 10vh;
   height: 100vh;
   width: 100%;
   background-color: black;
@@ -56,8 +121,8 @@ a{
 
 #msgTab{
   background-color: white;
-  height: 60vh;
-  width: 40vw;
+  height: 55vh;
+  width: 30vw;
   box-shadow: 5px 10px #888888;
 }
 
@@ -68,11 +133,75 @@ a{
   }
   #msgTabHeader img{
     height: 100%;
-    width: 10%;
+    width: 15%;
   }
 
   #msgTabContent{
     height: 90%;
+  }
+
+  #msgToArduino{
+    height: 100%;
+  }
+
+  #customTab{
+    background-color: white;
+    height: 55vh;
+    width: 50vw;
+    box-shadow: 5px 10px #888888;
+  }
+
+    #customTabHeader{
+      width: 100%;
+      height: 10%;
+      background-color: #E0E0E0;
+    }
+    #customTabHeader img{
+      height: 100%;
+      width: 10%;
+    }
+
+    #customTabContent{
+      height: 90%;
+    }
+
+  .whiteFont{
+    color: white;
+  }
+  .red{
+    background-color: red;
+  }
+  .orange{
+    background-color: orange;
+  }
+  .yellow{
+    background-color: yellow;
+  }
+  .yellow:hover{
+    color: grey;
+  }
+  .green{
+    background-color: green;
+  }
+  .blue{
+    background-color: blue;
+  }
+  .pink{
+    background-color: pink;
+  }
+  .purple{
+    background-color: purple;
+  }
+  .black{
+    background-color: black;
+  }
+  .white{
+    background-color: white;
+    border-radius: 1px;
+    border-color: black;
+  }
+  .white:hover{
+    color: grey;
   }
 /* Map Location Styling ------------------------------------------- */
 #seeLocation{
@@ -161,29 +290,4 @@ a{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-}
-
-.typewriter {
-	/* width: 18ch; */
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 4px solid black;
-	animation: cursor 1s step-start infinite, text 2s steps(18),
-  blink-caret .75s step-end infinite;
-}
-
-@keyframes cursor {
-	0%, 100% { border-color: black; }
-	50% { border-color: transparent; }
-}
-
-@keyframes text {
-	0% { width: 0; }
-	100% { width: 29ch; }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #16C700; }
 }

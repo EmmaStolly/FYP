@@ -1,28 +1,52 @@
 <section id ="coverPage" class ="bg-black">
-  <div class = "d-flex justify-content-center h-100 align-items-center">
-  <div> <h1 class="text-center typewriter">Welcome To Invasion 2.0...</h1> <div>
-  <!-- <h2 class = "typewriter2"> Click to begin... </h2> -->
-<!-- <div id="coverNav" class ="d-flex flex-row justify-content-center">
-   <a id="navLink1" href="#sendMessage"><p class ="pr-5 text-center">Send Message</p></a>
-    <a id="navLink1" href="#seeLocation"><p class="text-center">GPS Tracker</p></a>
-     <a id="navLink1" href="#blog"><p class ="pl-5 text-center">Development Blog</p></a>
- </div> -->
+  <div class = "d-flex justify-content-center h-75 align-items-center">
+  <div> <h1 class="text-center typewriter">Watch Your Wearables</h1> </div>
+</div>
+<div class="d-flex justify-content-center">
+ <a href="#instructions"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
 </div>
 </section>
 
-<section id ="sendMessage" class ="d-flex flex-column justify-content-center align-items-center">
-  <div>
-  <h2 class="text-center"> C:\Invasion2.0> Edit Device Display</h2>
+<section id="instructions">
+
+  <div class="d-flex justify-content-center pt-3">
+   <a href="#coverPage"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
+  </div>
+
+<div class="d-flex justify-content-center align-items-center flex-column pt-4">
+  <h2> Welcome </h2>
+  <p class ="text-center pt-3"> Watch Your Wearables is a project built to demonstrate the risks with the ever-growing industry of wearable devices.
+    With <a href="https://www.prnewswire.com/news-releases/56-of-people-own-at-least-one-wearable-as-google-competes-for-market-share-300958174.html#:~:text=56%25%20of%20People%20Own%20at%20Least%20One%20Wearable%2C%20as%20Google,growth%20of%20the%20smartwatch%20market." class="ref">56% of people owning a wearable</a>, it's surprising how little people look into the behind-the-scenes of how their device is functioning. </p>
+  <p class ="text-center">Within this application, you will take control of an electronic lanyard that has been placed on unsuspecting victims. You are in
+full control of this display with no limitations to what you may upload. Send a compliment to the user, or use it to scare your victim
+by utilising the built-in GPS tracker to think they're being followed.</p>
+
+<img src ="/img/device.jpg"></img>
+
 </div>
-  <div class = "mt-5 d-flex flex-row">
+  <div class="d-flex justify-content-center">
+   <a href="#sendMessage"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
+  </div>
+
+</section>
+
+<section id ="sendMessage" class ="d-flex flex-column justify-content-center align-items-center">
+  <div class="d-flex justify-content-center pb-5">
+   <a href="#instructions"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
+  </div>
+  <div>
+  <h2 class="text-center pb-3"> C:\WatchYourWearables> Edit Device Display</h2>
+</div>
+  <div class = "d-flex flex-row">
 
   <div id ="msgTab" class="mr-5">
     <div id ="msgTabHeader" class= "d-flex justify-content-between align-items-center">
             <h4 class ="blackFont ml-2"> SendMessageToDevice.exe </h4>
        <img src ="/img/closeButton.png">
     </div>
-<div id ="msgTabContent" class ="d-flex justify-content-center align-items-center">
-    <form id="msgToArduino">
+<div id ="msgTabContent">
+    <form id="msgToArduino" class ="d-flex justify-content-center align-items-center flex-column">
+      <p class ="text-center"> Type a message to display on the device and click 'Send Message'</p>
        <b>Message:</b>
        <input id="customMsg" type="text" name="customMsg" value=""><br><br>
        <!-- On button click, trigger sendData function -->
@@ -31,32 +55,43 @@
   </div>
 </div>
 
-<div id ="msgTab">
-  <div id ="msgTabHeader" class= "d-flex justify-content-between align-items-center">
+<div id ="customTab">
+  <div id ="customTabHeader" class= "d-flex justify-content-between align-items-center">
           <h4 class ="blackFont ml-2"> CustomiseDevice.exe </h4>
      <img src ="/img/closeButton.png">
   </div>
-<div id ="msgTabContent" class ="d-flex justify-content-center align-items-center">
+<div id ="customTabContent" class ="d-flex justify-content-center align-items-center">
 
 <div class ="d-flex flex-column">
-<div>
-<button class="btn btn-primary" onclick="redFont()">Red Font</button>
-<button class="btn btn-primary" onclick="orangeFont()">orangeFont</button>
-<button class="btn btn-primary" onclick="yellowFont()">YellowFont</button>
-<button class="btn btn-primary" onclick="greenFont()">Green Font</button>
-<button class="btn btn-primary" onclick="blueFont()">Blue Font</button>
-<button class="btn btn-primary" onclick="pinkFont()">Pink Font</button>
-<button class="btn btn-primary" onclick="purpleFont()">Purple Font</button>
+  <h4 class = "text-center mb-4"> Customise The Look Of The Device
+  <h5 class ="text-center"> Select Font Colour </h5>
+<div class ="d-flex flex-row justify-content-center align-items-center">
+<button class="btn red whiteFont mr-1" onclick="redFont()">Red Font</button>
+<button class="btn orange whiteFont mr-1" onclick="orangeFont()">orangeFont</button>
+<button class="btn yellow mr-1" onclick="yellowFont()">YellowFont</button>
+<button class="btn green whiteFont mr-1" onclick="greenFont()">Green Font</button>
+<button class="btn blue whiteFont" onclick="blueFont()">Blue Font</button>
+</div>
+<div class ="d-flex flex-row justify-content-center align-items-center mt-3">
+<button class="btn pink whiteFont mr-1" onclick="pinkFont()">Pink Font</button>
+<button class="btn purple whiteFont mr-1" onclick="purpleFont()">Purple Font</button>
+<button class="btn black whiteFont mr-1" onclick="blackFont()">Black Font</button>
+<button class="btn white" onclick="whiteFont()">White Font</button>
 </div>
 
-<div>
-<button class="btn btn-primary" onclick="redBg()">Red Bg</button>
-<button class="btn btn-primary" onclick="orangeBg()">orangeBg</button>
-<button class="btn btn-primary" onclick="yellowBg()">YellowBg</button>
-<button class="btn btn-primary" onclick="greenBg()">Green Bg</button>
-<button class="btn btn-primary" onclick="blueBg()">Blue Bg</button>
-<button class="btn btn-primary" onclick="pinkBg()">Pink Bg</button>
-<button class="btn btn-primary" onclick="purpleBg()">Purple Bg</button>
+<h5 class ="text-center mt-5"> Select Background Colour </h5>
+<div class ="d-flex flex-row justify-content-center align-items-center">
+<button class="btn red whiteFont mr-1" onclick="redBg()">Red Bg</button>
+<button class="btn orange whiteFont mr-1" onclick="orangeBg()">orangeBg</button>
+<button class="btn yellow mr-1 mr-1" onclick="yellowBg()">YellowBg</button>
+<button class="btn green whiteFont mr-1" onclick="greenBg()">Green Bg</button>
+<button class="btn blue whiteFont" onclick="blueBg()">Blue Bg</button>
+</div>
+<div class ="d-flex flex-row justify-content-center align-items-center mt-3">
+<button class="btn pink whiteFont mr-1" onclick="pinkBg()">Pink Bg</button>
+<button class="btn purple whiteFont mr-1" onclick="purpleBg()">Purple Bg</button>
+<button class="btn black whiteFont mr-1" onclick="blackBg()">Black Bg</button>
+<button class="btn white" onclick="whiteBg()">White Bg</button>
 </div>
 </div>
 
@@ -94,6 +129,14 @@ function purpleFont() {
   socket.emit('purpleFont');
   console.log("Sent Purple Font");
 }
+function blackFont() {
+  socket.emit('blackFont');
+  console.log("Sent Black Font");
+}
+function whiteFont() {
+  socket.emit('whiteFont');
+  console.log("Sent White Font");
+}
 
 function redBg() {
   socket.emit('redBg');
@@ -123,17 +166,31 @@ function purpleBg() {
   socket.emit('purpleBg');
   console.log("Sent Purple Bg");
 }
+function blackBg() {
+  socket.emit('blackBg');
+  console.log("Sent Black Bg");
+}
+function whiteBg() {
+  socket.emit('whiteBg');
+  console.log("Sent White Bg");
+}
 </script>
 
+</div>
+
+<div class="d-flex justify-content-center pt-5">
+ <a href="#seeLocation"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
 </div>
 
 </section>
 
 <section id ="seeLocation" class= "d-flex flex-column align-items-center">
+  <div class="d-flex justify-content-center mb-4">
+   <a href="#sendMessage"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
+  </div>
+  <h2 class="text-center"> C:\WatchYourWearables> Live GPS of Device...</h2>
 
-  <h2 class="text-center"> C:\Invasion2.0> Live GPS of Device...</h2>
-
-  <div id ="gpsTab" class ="mt-5">
+  <div id ="gpsTab" class ="mt-3">
     <div id ="gpsTabHeader" class= "d-flex justify-content-between align-items-center">
             <h4 class ="blackFont ml-2"> LocationTrackingDevice.exe </h4>
        <img src ="/img/closeButton.png">

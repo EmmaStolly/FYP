@@ -12,6 +12,7 @@
   {{!-- Load custom CSS --}}
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/libs/obnoxious.css">
 </head>
 
 
@@ -31,5 +32,19 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script> -->
+    <script type="text/javascript" src="./libs/mousescroll/snap-scroll.js"></script>
+     <script src="https://kit.fontawesome.com/4ef2169003.js" crossorigin="anonymous"></script>
 </html>
+
+<!-- Smooth Scrolling on button press-->
+   <script>
+   document.querySelectorAll('a').forEach($anchor => {
+       $anchor.addEventListener('click', function (e) {
+           e.preventDefault();
+           document.querySelector(this.getAttribute('href')).scrollIntoView({
+               behavior: 'smooth',
+               block: 'start' //scroll to top of the target element
+           });
+       });
+   });
+   </script>

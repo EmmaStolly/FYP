@@ -74,6 +74,12 @@ client.on("pinkFont", function(data) {
 client.on("purpleFont", function(data) {
  mqttClient.publish("custom/font/purple");
 });
+client.on("blackFont", function(data) {
+ mqttClient.publish("custom/font/black");
+});
+client.on("whiteFont", function(data) {
+ mqttClient.publish("custom/font/white");
+});
 
 client.on("redBg", function(data) {
  mqttClient.publish("custom/background/red");
@@ -95,6 +101,12 @@ mqttClient.publish("custom/background/pink");
 });
 client.on("purpleBg", function(data) {
 mqttClient.publish("custom/background/purple");
+});
+client.on("blackBg", function(data) {
+mqttClient.publish("custom/background/black");
+});
+client.on("whiteBg", function(data) {
+mqttClient.publish("custom/background/white");
 });
 
 });
