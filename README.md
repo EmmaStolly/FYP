@@ -49,9 +49,22 @@ _See 'Arduino Components' for equipment list_
 
 1. Wire components together following the diagram below:
 
-![alt text](
-  )
-1. Download [Github Repo](https://github.com/EmmaStolly/watchyourwearable) and locate Arduino_Control/Arduino_Control.ino
+<img src="public/img/ArduinoSchematic.png"
+     alt="Arduino Schematic"/>
+
+2. Download [Github Repo](https://github.com/EmmaStolly/watchyourwearable) and locate Arduino_Control/Arduino_Control.ino
+
+3. Input MQTT user and password
+
+4. Input wifi ssid and password (Mobile hotspot is good for out and about)
+
+5. Using a mini-USB cable, plug in Arduino Nano IoT 33 to computer
+
+6. Upload code to Arduino Nano IoT 33
+
+7. Open serial monitor and wait for connection to wifi and MQTT
+
+8. Unplug and you're good to go!
 
 
 ### Live Application Demo
