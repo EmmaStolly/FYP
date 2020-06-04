@@ -72,7 +72,7 @@ _See 'Arduino Components' for equipment list_
 8. Unplug and you're good to go!
 
 **Arduino Housing (Optional)**
-1. Locate Arduino_Control/Front.stl and Arduino_Control/Back.stl
+1. Locate Arduino_Control/Front.stl, Arduino_Control/Back.stl and Arduino_Control/Hook.stl
 2. Load onto MicroSD and insert into 3D Printer
 3. Follow your 3D Printer's instructions to begin print
 
