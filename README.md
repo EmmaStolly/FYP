@@ -33,6 +33,11 @@ People may use the website connected to the device to customise the display of t
 - express
 - socket.io
 
+**3D Model Technology**
+- 3DS Max
+- Ultimaker Cura
+- Creality Ender 3 Printer
+
 ### **Setup**
 
 **Website**
@@ -66,6 +71,10 @@ _See 'Arduino Components' for equipment list_
 
 8. Unplug and you're good to go!
 
+**Arduino Housing (Optional)**
+1. Locate Arduino_Control/Front.stl and Arduino_Control/Back.stl
+2. Load onto MicroSD and insert into 3D Printer
+3. Follow your 3D Printer's instructions to begin print
 
 ### Live Application Demo
 

@@ -32,9 +32,9 @@
   // Topic where location data will be coming in
   var MQTT_TOPIC = "/location";
   //MQTT Token
-  var MQTT_ADDR = "mqtt://763f6861:1362154b898a179a@broker.shiftr.io";
+  var MQTT_ADDR = ""; //Input your MQTT Address here
   //Shiftr's port
-  var MQTT_PORT = 1883;
+  var MQTT_PORT = ; //Input your MQTT Port here
   //Connect the client to the broker's address
   var mqttClient = mqtt.connect(MQTT_ADDR);
 
