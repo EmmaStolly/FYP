@@ -1,28 +1,32 @@
-<div class ="nav d-flex justify-content-between align-items-center">
-  <div>
-<nav class="navbar navbar-expand-lg fixed-top bg-light">
+<nav class="navbar navbar-expand-lg fixed-top bg-light justify-content-right w-100">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon bg-dark"></span>
+    <i class="fas fa-bars blackFont"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarMobile">
-    <a id ="navTitle"class="navbar-brand" href="#coverPage" onClick="obnoxiousCSS()"><h2><b>Watch Your Wearables</b></h2></a>
-</div>
-<div>
+    <a class="navbar-brand mr-5" href="#coverPage" onClick="obnoxiousCSS()"><h2><b>Watch Your Wearables</b></h2></a>
+
   <ul class="navbar-nav">
     <li class="nav-item active">
-        <a class="text-center navLink mr-5" href="#instructions">Instructions</a>
+        <a class="text-center navLink mr-5 smoothScroll" href="#instructions">Instructions</a>
       </li>
       <li class="nav-item active">
-          <a class="text-center navLink mr-5" href="#sendMessage">Customise Device</a>
+          <a class="text-center navLink mr-5 smoothScroll" href="#sendMessage">Customise Device</a>
         </li>
         <li class="nav-item active">
-            <a class="text-center navLink" href="#seeLocation">Device Location</a>
+            <a class="text-center navLink mr-5 smoothScroll" href="#seeLocation">Device Location</a>
           </li>
-    </div>
+
+          <li class="nav-item active">
+              <a class="text-center navLink mr-5" target="_blank" href="https://github.com/EmmaStolly/watchyourwearable">Github Page</a>
+            </li>
     </ul>
+
+
   </div>
+
 </nav>
-</div>
+
+
 
 <script>
 function obnoxiousCSS(){

@@ -9,38 +9,38 @@
 
 <section id="instructions">
 
-  <div class="d-flex justify-content-center pt-3">
+  <div class="d-flex justify-content-center">
    <a href="#coverPage"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
   </div>
 
-<div class="d-flex justify-content-center align-items-center flex-column pt-4">
-  <h2> Welcome </h2>
-  <p class ="text-center pt-3"> Watch Your Wearables is a project built to demonstrate the risks with the ever-growing industry of wearable devices.
-    With <a href="https://www.prnewswire.com/news-releases/56-of-people-own-at-least-one-wearable-as-google-competes-for-market-share-300958174.html#:~:text=56%25%20of%20People%20Own%20at%20Least%20One%20Wearable%2C%20as%20Google,growth%20of%20the%20smartwatch%20market." class="ref">56% of people owning a wearable</a>, it's surprising how little people look into the behind-the-scenes of how their device is functioning. </p>
+<div class="d-flex justify-content-center align-items-center flex-column">
+  <h2 class ="welcomePadding"> Welcome </h2>
+  <p class ="text-center"> Watch Your Wearables is a project built to demonstrate the risks with the ever-growing industry of wearable devices.
+    With <a href="https://www.prnewswire.com/news-releases/56-of-people-own-at-least-one-wearable-as-google-competes-for-market-share-300958174.html#:~:text=56%25%20of%20People%20Own%20at%20Least%20One%20Wearable%2C%20as%20Google,growth%20of%20the%20smartwatch%20market."
+    class="ref">56% of people owning a wearable</a>, it's surprising how little people look into the behind-the-scenes of how their device is functioning. </p>
   <p class ="text-center">Within this application, you will take control of an electronic lanyard that has been placed on unsuspecting victims. You are in
 full control of this display with no limitations to what you may upload. Send a compliment to the user, or use it to scare your victim
 by utilising the built-in GPS tracker to think they're being followed.</p>
-
-<img src ="/img/device.jpg"></img>
-
+    <div><img src ="/img/device.jpg"></img></div>
 </div>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center pt-3 pb-5">
    <a href="#sendMessage"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
   </div>
 
 </section>
 
 <section id ="sendMessage" class ="d-flex flex-column justify-content-center align-items-center">
-  <div class="d-flex justify-content-center pb-5">
+
+  <div class="d-flex justify-content-center">
    <a href="#instructions"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
   </div>
   <div>
   <h2 class="text-center pb-3"> C:\WatchYourWearables> Edit Device Display</h2>
 </div>
-  <div class = "d-flex flex-row">
+  <div class = "d-flex tabs">
 
-  <div id ="msgTab" class="mr-5">
-    <div id ="msgTabHeader" class= "d-flex justify-content-between align-items-center">
+  <div id ="msgTab">
+    <div id ="msgTabHeader" class ="d-flex flex-row justify-content-between">
             <h4 class ="blackFont ml-2"> SendMessageToDevice.exe </h4>
        <img src ="/img/closeButton.png">
     </div>
@@ -62,41 +62,42 @@ by utilising the built-in GPS tracker to think they're being followed.</p>
   </div>
 <div id ="customTabContent" class ="d-flex justify-content-center align-items-center">
 
-<div class ="d-flex flex-column">
+<div class ="d-flex flex-column w-100">
   <h4 class = "text-center mb-4"> Customise The Look Of The Device
   <h5 class ="text-center"> Select Font Colour </h5>
 <div class ="d-flex flex-row justify-content-center align-items-center">
-<button class="btn red whiteFont mr-1" onclick="redFont()">Red Font</button>
-<button class="btn orange whiteFont mr-1" onclick="orangeFont()">orangeFont</button>
-<button class="btn yellow mr-1" onclick="yellowFont()">YellowFont</button>
-<button class="btn green whiteFont mr-1" onclick="greenFont()">Green Font</button>
-<button class="btn blue whiteFont" onclick="blueFont()">Blue Font</button>
+<button class="btn red whiteFont mr-1" onclick="redFont()"></button>
+<button class="btn orange whiteFont mr-1" onclick="orangeFont()"></button>
+<button class="btn yellow mr-1" onclick="yellowFont()"></button>
+<button class="btn green whiteFont mr-1" onclick="greenFont()"></button>
+<button class="btn blue whiteFont" onclick="blueFont()"></button>
 </div>
 <div class ="d-flex flex-row justify-content-center align-items-center mt-3">
-<button class="btn pink whiteFont mr-1" onclick="pinkFont()">Pink Font</button>
-<button class="btn purple whiteFont mr-1" onclick="purpleFont()">Purple Font</button>
-<button class="btn black whiteFont mr-1" onclick="blackFont()">Black Font</button>
-<button class="btn white" onclick="whiteFont()">White Font</button>
+<button class="btn pink whiteFont mr-1" onclick="pinkFont()"></button>
+<button class="btn purple whiteFont mr-1" onclick="purpleFont()"></button>
+<button class="btn black whiteFont mr-1" onclick="blackFont()"></button>
+<button class="btn white" onclick="whiteFont()"></button>
 </div>
 
 <h5 class ="text-center mt-5"> Select Background Colour </h5>
 <div class ="d-flex flex-row justify-content-center align-items-center">
-<button class="btn red whiteFont mr-1" onclick="redBg()">Red Bg</button>
-<button class="btn orange whiteFont mr-1" onclick="orangeBg()">orangeBg</button>
-<button class="btn yellow mr-1 mr-1" onclick="yellowBg()">YellowBg</button>
-<button class="btn green whiteFont mr-1" onclick="greenBg()">Green Bg</button>
-<button class="btn blue whiteFont" onclick="blueBg()">Blue Bg</button>
+<button class="btn red whiteFont mr-1" onclick="redBg()"></button>
+<button class="btn orange whiteFont mr-1" onclick="orangeBg()"></button>
+<button class="btn yellow mr-1 mr-1" onclick="yellowBg()"></button>
+<button class="btn green whiteFont mr-1" onclick="greenBg()"></button>
+<button class="btn blue whiteFont" onclick="blueBg()"></button>
 </div>
 <div class ="d-flex flex-row justify-content-center align-items-center mt-3">
-<button class="btn pink whiteFont mr-1" onclick="pinkBg()">Pink Bg</button>
-<button class="btn purple whiteFont mr-1" onclick="purpleBg()">Purple Bg</button>
-<button class="btn black whiteFont mr-1" onclick="blackBg()">Black Bg</button>
-<button class="btn white" onclick="whiteBg()">White Bg</button>
+<button class="btn pink whiteFont mr-1" onclick="pinkBg()"></button>
+<button class="btn purple whiteFont mr-1" onclick="purpleBg()"></button>
+<button class="btn black whiteFont mr-1" onclick="blackBg()"></button>
+<button class="btn white" onclick="whiteBg()"></button>
+</div>
+</div>
+</div>
 </div>
 </div>
 
-</div>
-</div>
 <!-- Socket.io Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script>

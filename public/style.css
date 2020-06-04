@@ -61,32 +61,6 @@ i:hover{
   width: 100%;
 }
 
-.typewriter {
-	/* width: 18ch; */
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 4px solid black;
-	animation: cursor 1s step-start infinite, text 2s steps(18),
-  blink-caret .75s step-end infinite;
-}
-
-@keyframes cursor {
-	0%, 100% { border-color: black; }
-	50% { border-color: transparent; }
-}
-
-@keyframes text {
-	0% { width: 0; }
-	100% { width: 20ch; }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #16C700; }
-}
-
-
 /* Instructions/About Page Styling ------------------------------------------- */
 #instructions{
 padding-top: 10vh;
@@ -101,14 +75,22 @@ background-color: black;
 .ref:hover{
   color: red;
 }
+
+.welcomePadding{
+  padding-top: 2vh;
+}
 #instructions p{
   width: 90%;
 }
 
 #instructions img{
   height: 35vh;
-  width: 15vw;
-  transform: rotate(-90deg);
+  width: 35vw;
+}
+
+#instructions i{
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 /* Send Message Page Styling ------------------------------------------- */
@@ -119,11 +101,19 @@ background-color: black;
   background-color: black;
 }
 
+.tabs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 #msgTab{
   background-color: white;
   height: 55vh;
-  width: 30vw;
+  width: 35vw;
   box-shadow: 5px 10px #888888;
+  margin-right: 2vw;
 }
 
   #msgTabHeader{
@@ -163,6 +153,11 @@ background-color: black;
 
     #customTabContent{
       height: 90%;
+    }
+
+    #customTab button{
+    width: 5vw;
+    height: 5vh;
     }
 
   .whiteFont{
@@ -253,22 +248,55 @@ background-color: black;
     font-size: 14px;
   }
 
-  #coverNav{
-    margin-top: 10%;
+  h2{
+    font-size: 20px;
+    padding: 5%;
   }
 
-  #msgNav a{
-    line-height: 40%;
+  h4{
+    font-size: 15px;
   }
 
-  #msgTab{
-    height: 40vh;
-    width: 80vw;
+  .welcomePadding{
+    padding: 0;
   }
 
-  #msgTabContent h2{
-    font-size: 18px;
+  #instructions p, .ref{
+    font-size: 14px;
   }
+
+.tabs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#instructions img{
+  height: 15vh;
+}
+
+#sendMessage{
+  height: 140vh;
+}
+    #msgTab{
+      height: 40vh;
+      width: 80vw;
+    }
+
+#customTab{
+  margin-top: 3vh;
+  height: 60vh;
+  width: 80vw;
+}
+
+#seeLocation{
+  height: 100vh;
+}
+#gpsTab{
+  height: 60vh;
+  width: 80vw;
+}
 
 }
 
@@ -279,6 +307,30 @@ background-color: black;
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .typewriter {
+  	/* width: 18ch; */
+  	white-space: nowrap;
+  	overflow: hidden;
+  	border-right: 4px solid black;
+  	animation: cursor 1s step-start infinite, text 2s steps(18),
+    blink-caret .75s step-end infinite;
+  }
+
+  @keyframes cursor {
+  	0%, 100% { border-color: black; }
+  	50% { border-color: transparent; }
+  }
+
+  @keyframes text {
+  	0% { width: 0; }
+  	100% { width: 20ch; }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #16C700; }
+  }
 
 }
 
