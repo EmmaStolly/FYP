@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FYP</title>
+  <title>Watch Your Wearables</title>
   {{!-- Load bootstrap --}}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   {{!-- Load custom CSS --}}
   <link rel="stylesheet" type="text/css" href="./style.css" />
+  <!-- Custom google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Obnoxious CSS Library -->
   <link rel="stylesheet" href="/libs/obnoxious.css">
 </head>
 
@@ -20,31 +22,35 @@
   {{!-- Header partial --}}
   {{> header}}
 
-  {{!-- Specific views (dashboard, about, etc.) render here via the {{{body}}} request --}}
+  {{!-- Load page content (e.g index.hbs) --}}
   {{{body}}}
 
-
-
 </body>
+<!-- Jquery library -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./libs/mousescroll/snap-scroll.js"></script>
-     <script src="https://kit.fontawesome.com/4ef2169003.js" crossorigin="anonymous"></script>
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<!-- Bootstrap JS Library -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<!-- <script type="text/javascript" src="./libs/mousescroll/snap-scroll.js"></script> -->
+<script src="https://kit.fontawesome.com/4ef2169003.js" crossorigin="anonymous"></script>
 </html>
 
-<!-- Smooth Scrolling on button press-->
-   <script>
-   document.querySelectorAll('.smoothScroll').forEach($anchor => {
-       $anchor.addEventListener('click', function (e) {
-           e.preventDefault();
-           document.querySelector(this.getAttribute('href')).scrollIntoView({
-               behavior: 'smooth',
-               block: 'start' //scroll to top of the target element
-           });
-       });
-   });
-   </script>
+<!-- Smooth scrolling between sections on all a tags with 'smoothScroll' as a class-->
+<script>
+// Fine all a tags with smoothScroll
+document.querySelectorAll('.smoothScroll').forEach($anchor => {
+  // Listen for mouse click
+  $anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    // Get the href page link and scroll into view
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      // animation
+      behavior: 'smooth',
+      block: 'start' //scroll to top of the target element
+    });
+  });
+});
+</script>

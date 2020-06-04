@@ -1,37 +1,42 @@
-<nav class="navbar navbar-expand-lg fixed-top bg-light justify-content-right w-100">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="fas fa-bars blackFont"></i>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarMobile">
-    <a class="navbar-brand mr-5" href="#coverPage" onClick="obnoxiousCSS()"><h2><b>Watch Your Wearables</b></h2></a>
+  <!-- Navigation Bar -->
+  <!-- Expand on larger screens, stay stuck to top of page -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-light w-100">
+    <!-- On mobile size, shrink into burger bar -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars blackFont"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMobile">
+      <!-- Navbar Title with Obnoxious CSS animation -->
+      <a class="navbar-brand mr-5 navTitle" href="#coverPage" onClick="obnoxiousCSS()"><h2><b>Watch Your Wearables</b></h2></a>
 
-  <ul class="navbar-nav">
-    <li class="nav-item active">
-        <a class="text-center navLink mr-5 smoothScroll" href="#instructions">Instructions</a>
-      </li>
+  <!-- Navbar Links -->
+    <ul class="navbar-nav">
       <li class="nav-item active">
-          <a class="text-center navLink mr-5 smoothScroll" href="#sendMessage">Customise Device</a>
+        <!-- jquery smooth scroll to each section -->
+          <a class="text-center navLink mr-5 smoothScroll" href="#instructions">Instructions</a>
         </li>
         <li class="nav-item active">
-            <a class="text-center navLink mr-5 smoothScroll" href="#seeLocation">Device Location</a>
+            <a class="text-center navLink mr-5 smoothScroll" href="#sendMessage">Customise Device</a>
           </li>
-
           <li class="nav-item active">
-              <a class="text-center navLink mr-5" target="_blank" href="https://github.com/EmmaStolly/watchyourwearable">Github Page</a>
+              <a class="text-center navLink mr-5 smoothScroll" href="#seeLocation">Device Location</a>
             </li>
-    </ul>
+  <!-- Project github page, target blank triggers new tab to open -->
+            <li class="nav-item active">
+                <a class="text-center navLink mr-5" target="_blank" href="https://github.com/EmmaStolly/watchyourwearable">Github Page</a>
+              </li>
+      </ul>
+    </div>
+  </nav>
 
 
-  </div>
-
-</nav>
-
-
-
-<script>
-function obnoxiousCSS(){
-  var element = document.getElementById("navTitle");
-  element.classList.add("animated");
-  element.classList.add("fontalicious");
-}
-</script>
+  <!-- Obnoxious CSS Trigger -->
+  <script>
+  function obnoxiousCSS(){
+    // Get class navTitle
+    var element = document.getElementById("navTitle");
+    // Add these classes (The classes to trigger obnoxious css fontalicious animation)
+    element.classList.add("animated");
+    element.classList.add("fontalicious");
+  }
+  </script>

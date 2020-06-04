@@ -18,10 +18,13 @@ html, body{
   width: 100%;
   height: 100vh;
 }
+
+/* Font colour to green */
 p, h1, h2, h3, h4, h5, h6{
   color: #16C700;
 }
 
+/* Setting up text */
 h1{
   font-size: 70px;
 }
@@ -39,11 +42,12 @@ a{
   color: black;
 }
 
+/* On chevron hover, turn red */
 i:hover{
   color: red;
 }
 
-
+/* navbar styling */
 .nav{
   height: 10vh;
 }
@@ -52,22 +56,27 @@ i:hover{
   font-size: 20px;
   color: #16C700;
 }
+/* navigation hover state */
 .navLink:hover{
   color: red;
 }
+
 /* Cover Page Styling ------------------------------------------- */
+/* Setting up page size */
 #coverPage{
   height: 100vh;
   width: 100%;
 }
 
 /* Instructions/About Page Styling ------------------------------------------- */
+/* Setting up page size */
 #instructions{
-padding-top: 10vh;
-height: 100vh;
-width: 100%;
-background-color: black;
+  padding-top: 10vh;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
 }
+/* Styling reference link */
 .ref{
   font-size: 20px;
   color: red;
@@ -76,24 +85,28 @@ background-color: black;
   color: red;
 }
 
+/* Title padding */
 .welcomePadding{
   padding-top: 2vh;
 }
+/* text container */
 #instructions p{
   width: 90%;
 }
-
+/* Image sizing */
 #instructions img{
   height: 35vh;
   width: 35vw;
 }
 
+/* Arrow padding */
 #instructions i{
   padding-top: 10%;
   padding-bottom: 10%;
 }
 
-/* Send Message Page Styling ------------------------------------------- */
+/* Customise Page Styling ------------------------------------------- */
+/* Setting up page size */
 #sendMessage{
   padding-top: 10vh;
   height: 100vh;
@@ -101,6 +114,7 @@ background-color: black;
   background-color: black;
 }
 
+/* Flexbox two tabs to sit next to each other and central */
 .tabs{
   display: flex;
   flex-direction: row;
@@ -108,6 +122,7 @@ background-color: black;
   align-items: center;
 }
 
+/* Internet tab styling created in css */
 #msgTab{
   background-color: white;
   height: 55vh;
@@ -116,96 +131,94 @@ background-color: black;
   margin-right: 2vw;
 }
 
-  #msgTabHeader{
-    width: 100%;
-    height: 10%;
-    background-color: #E0E0E0;
-  }
-  #msgTabHeader img{
-    height: 100%;
-    width: 15%;
-  }
+#msgTabHeader{
+  width: 100%;
+  height: 10%;
+  background-color: #E0E0E0;
+}
+/* Fake close button */
+#msgTabHeader img{
+  height: 100%;
+  width: 15%;
+}
 
-  #msgTabContent{
-    height: 90%;
-  }
+#msgTabContent{
+  height: 90%;
+}
 
-  #msgToArduino{
-    height: 100%;
-  }
+#msgToArduino{
+  height: 100%;
+}
 
-  #customTab{
-    background-color: white;
-    height: 55vh;
-    width: 50vw;
-    box-shadow: 5px 10px #888888;
-  }
+/* Internet tab styling created in css */
+#customTab{
+  background-color: white;
+  height: 55vh;
+  width: 50vw;
+  box-shadow: 5px 10px #888888;
+}
 
-    #customTabHeader{
-      width: 100%;
-      height: 10%;
-      background-color: #E0E0E0;
-    }
-    #customTabHeader img{
-      height: 100%;
-      width: 10%;
-    }
+#customTabHeader{
+  width: 100%;
+  height: 10%;
+  background-color: #E0E0E0;
+}
+#customTabHeader img{
+  height: 100%;
+  width: 10%;
+}
 
-    #customTabContent{
-      height: 90%;
-    }
+#customTabContent{
+  height: 90%;
+}
 
-    #customTab button{
-    width: 5vw;
-    height: 5vh;
-    }
+#customTab button{
+  width: 5vw;
+  height: 5vh;
+}
 
-  .whiteFont{
-    color: white;
-  }
-  .red{
-    background-color: red;
-  }
-  .orange{
-    background-color: orange;
-  }
-  .yellow{
-    background-color: yellow;
-  }
-  .yellow:hover{
-    color: grey;
-  }
-  .green{
-    background-color: green;
-  }
-  .blue{
-    background-color: blue;
-  }
-  .pink{
-    background-color: pink;
-  }
-  .purple{
-    background-color: purple;
-  }
-  .black{
-    background-color: black;
-  }
-  .white{
-    background-color: white;
-    border-radius: 1px;
-    border-color: black;
-  }
-  .white:hover{
-    color: grey;
-  }
+/* Customising button colours */
+.whiteFont{
+  color: white;
+}
+.red{
+  background-color: red;
+}
+.orange{
+  background-color: orange;
+}
+.yellow{
+  background-color: yellow;
+}
+.green{
+  background-color: green;
+}
+.blue{
+  background-color: blue;
+}
+.pink{
+  background-color: pink;
+}
+.purple{
+  background-color: purple;
+}
+.black{
+  background-color: black;
+}
+.white{
+  background-color: white;
+  border-radius: 1px;
+  border-color: black;
+}
 /* Map Location Styling ------------------------------------------- */
+/* Setting up page size */
 #seeLocation{
   padding-top: 10vh;
   height: 90vh;
-  /* width: 100vw; */
   background-color: black;
 }
 
+/* Internet tab styling created in css */
 #gpsTab{
   background-color: white;
   height: 60vh;
@@ -213,20 +226,21 @@ background-color: black;
   box-shadow: 5px 10px #888888;
 }
 
-  #gpsTabHeader{
-    width: 100%;
-    height: 10%;
-    background-color: #E0E0E0;
-  }
-  #gpsTabHeader img{
-    height: 100%;
-    width: 10%;
-  }
+#gpsTabHeader{
+  width: 100%;
+  height: 10%;
+  background-color: #E0E0E0;
+}
+#gpsTabHeader img{
+  height: 100%;
+  width: 10%;
+}
 
-  #gpsTabContent{
-    height: 90%;
-  }
+#gpsTabContent{
+  height: 90%;
+}
 
+/* Google maps size */
 #map{
   height: 70%;
   width: 80%;
@@ -236,6 +250,7 @@ background-color: black;
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  /* Making all text smaller */
   a{
     line-height: 80%;
   }
@@ -257,6 +272,7 @@ background-color: black;
     font-size: 15px;
   }
 
+  /* Removing padding */
   .welcomePadding{
     padding: 0;
   }
@@ -265,65 +281,64 @@ background-color: black;
     font-size: 14px;
   }
 
-.tabs{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* Changing tabs to display as column in mobile instead of row */
+  .tabs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Adjusting image size for mobile */
+  #instructions img{
+    height: 15vh;
+  }
+
+  /* Adjusting page & div sizes for mobile */
+  #sendMessage{
+    height: 140vh;
+  }
+  #msgTab{
+    height: 40vh;
+    width: 80vw;
+  }
+
+  #customTab{
+    margin-top: 3vh;
+    height: 60vh;
+    width: 80vw;
+  }
+
+  #seeLocation{
+    height: 100vh;
+  }
+  #gpsTab{
+    height: 60vh;
+    width: 80vw;
+  }
 }
 
-#instructions img{
-  height: 15vh;
-}
-
-#sendMessage{
-  height: 140vh;
-}
-    #msgTab{
-      height: 40vh;
-      width: 80vw;
-    }
-
-#customTab{
-  margin-top: 3vh;
-  height: 60vh;
-  width: 80vw;
-}
-
-#seeLocation{
-  height: 100vh;
-}
-#gpsTab{
-  height: 60vh;
-  width: 80vw;
-}
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  /* Cover page's typewriting animation */
   .typewriter {
-  	/* width: 18ch; */
-  	white-space: nowrap;
-  	overflow: hidden;
-  	border-right: 4px solid black;
-  	animation: cursor 1s step-start infinite, text 2s steps(18),
+    /* width: 18ch; */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid black;
+    animation: cursor 1s step-start infinite, text 2s steps(18),
     blink-caret .75s step-end infinite;
   }
 
   @keyframes cursor {
-  	0%, 100% { border-color: black; }
-  	50% { border-color: transparent; }
+    0%, 100% { border-color: black; }
+    50% { border-color: transparent; }
   }
 
   @keyframes text {
-  	0% { width: 0; }
-  	100% { width: 20ch; }
+    0% { width: 0; }
+    100% { width: 20ch; }
   }
 
   /* The typewriter cursor effect */
@@ -331,15 +346,5 @@ background-color: black;
     from, to { border-color: transparent }
     50% { border-color: #16C700; }
   }
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
 
 }

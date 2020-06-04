@@ -1,247 +1,281 @@
-<section id ="coverPage" class ="bg-black">
-  <div class = "d-flex justify-content-center h-75 align-items-center">
-  <div> <h1 class="text-center typewriter">Watch Your Wearables</h1> </div>
-</div>
-<div class="d-flex justify-content-center">
- <a href="#instructions"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
-</div>
-</section>
-
-<section id="instructions">
-
+  <!-- Cover Page -------------------------------------------------------------------------------------------------------->
+  <section id ="coverPage" class ="bg-black">
+    <!-- Flexbox to center section content -->
+    <div class = "d-flex justify-content-center h-75 align-items-center">
+      <!-- Typewriter class to trigger typing animation -->
+    <div> <h1 class="text-center typewriter">Watch Your Wearables</h1> </div>
+  </div>
+  <!-- Smooth scrolling chevron to next page section using fontawesome for icons -->
   <div class="d-flex justify-content-center">
-   <a href="#coverPage"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
+   <a href="#instructions" class="smoothScroll"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
+  </div>
+  </section>
+
+  <!-- Instructions Page -------------------------------------------------------------------------------------------------------->
+  <section id="instructions">
+
+  <!-- Smooth scrolling chevron to previous page section using fontawesome for icons -->
+    <div class="d-flex justify-content-center">
+     <a href="#coverPage" class="smoothScroll"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
+    </div>
+
+  <!-- Flexbox positioning -->
+  <div class="d-flex justify-content-center align-items-center flex-column">
+    <h2 class ="welcomePadding"> Welcome </h2>
+
+    <!-- Project summary -->
+    <p class ="text-center"> Watch Your Wearables is a project built to demonstrate the risks with the ever-growing industry of wearable devices.
+      With <a href="https://www.prnewswire.com/news-releases/56-of-people-own-at-least-one-wearable-as-google-competes-for-market-share-300958174.html#:~:text=56%25%20of%20People%20Own%20at%20Least%20One%20Wearable%2C%20as%20Google,growth%20of%20the%20smartwatch%20market."
+      class="ref">56% of people owning a wearable</a>, it's surprising how little people look into the behind-the-scenes of how their device is functioning. </p>
+    <p class ="text-center">Within this application, you will take control of an electronic lanyard that has been placed on unsuspecting victims. You are in
+  full control of this display with no limitations to what you may upload. Send a compliment to the user, or use it to scare your victim
+  by utilising the built-in GPS tracker to think they're being followed.</p>
+
+  <!-- Device Image -->
+      <div><img src ="/img/device.jpg"></img></div>
+
   </div>
 
-<div class="d-flex justify-content-center align-items-center flex-column">
-  <h2 class ="welcomePadding"> Welcome </h2>
-  <p class ="text-center"> Watch Your Wearables is a project built to demonstrate the risks with the ever-growing industry of wearable devices.
-    With <a href="https://www.prnewswire.com/news-releases/56-of-people-own-at-least-one-wearable-as-google-competes-for-market-share-300958174.html#:~:text=56%25%20of%20People%20Own%20at%20Least%20One%20Wearable%2C%20as%20Google,growth%20of%20the%20smartwatch%20market."
-    class="ref">56% of people owning a wearable</a>, it's surprising how little people look into the behind-the-scenes of how their device is functioning. </p>
-  <p class ="text-center">Within this application, you will take control of an electronic lanyard that has been placed on unsuspecting victims. You are in
-full control of this display with no limitations to what you may upload. Send a compliment to the user, or use it to scare your victim
-by utilising the built-in GPS tracker to think they're being followed.</p>
-    <div><img src ="/img/device.jpg"></img></div>
-</div>
-  <div class="d-flex justify-content-center pt-3 pb-5">
-   <a href="#sendMessage"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
+  <!-- Smooth scrolling chevron to next page section using fontawesome for icons -->
+    <div class="d-flex justify-content-center pt-3 pb-5">
+     <a href="#sendMessage" class="smoothScroll"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
+    </div>
+
+  </section>
+
+  <!-- Flexbox Positioning -->
+  <section id ="sendMessage" class ="d-flex flex-column justify-content-center align-items-center">
+
+  <!-- Smooth scrolling chevron to next page section using fontawesome for icons -->
+    <div class="d-flex justify-content-center">
+     <a href="#instructions" class="smoothScroll"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
+    </div>
+
+    <div>
+    <h2 class="text-center pb-3"> C:\WatchYourWearables> Edit Device Display</h2>
   </div>
 
-</section>
+  <!-- Flexbox positioning -->
+    <div class = "d-flex tabs">
 
-<section id ="sendMessage" class ="d-flex flex-column justify-content-center align-items-center">
-
-  <div class="d-flex justify-content-center">
-   <a href="#instructions"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
+      <!-- Div for fake internet tab styling -->
+    <div id ="msgTab">
+      <!-- Div for grey bar across 'internet tab' -->
+      <div id ="msgTabHeader" class ="d-flex flex-row justify-content-between">
+              <h4 class ="blackFont ml-2"> SendMessageToDevice.exe </h4>
+              <!-- Fake page close button -->
+         <img src ="/img/closeButton.png">
+      </div>
+      <!-- Send message input -->
+  <div id ="msgTabContent">
+      <form id="msgToArduino" class ="d-flex justify-content-center align-items-center flex-column">
+        <p class ="text-center"> Type a message to display on the device and click 'Send Message'</p>
+         <b>Message:</b>
+         <input id="customMsg" type="text" name="customMsg" value=""><br><br>
+         <!-- On button click, trigger sendData function below -->
+         <input type="button" onclick="sendData()" value="Send Message">
+      </form>
+    </div>
   </div>
-  <div>
-  <h2 class="text-center pb-3"> C:\WatchYourWearables> Edit Device Display</h2>
-</div>
-  <div class = "d-flex tabs">
 
-  <div id ="msgTab">
-    <div id ="msgTabHeader" class ="d-flex flex-row justify-content-between">
-            <h4 class ="blackFont ml-2"> SendMessageToDevice.exe </h4>
+  <div id ="customTab">
+    <div id ="customTabHeader" class= "d-flex justify-content-between align-items-center">
+            <h4 class ="blackFont ml-2"> CustomiseDevice.exe </h4>
        <img src ="/img/closeButton.png">
     </div>
-<div id ="msgTabContent">
-    <form id="msgToArduino" class ="d-flex justify-content-center align-items-center flex-column">
-      <p class ="text-center"> Type a message to display on the device and click 'Send Message'</p>
-       <b>Message:</b>
-       <input id="customMsg" type="text" name="customMsg" value=""><br><br>
-       <!-- On button click, trigger sendData function -->
-       <input type="button" onclick="sendData()" value="Send Message">
-    </form>
+  <div id ="customTabContent" class ="d-flex justify-content-center align-items-center">
+
+  <div class ="d-flex flex-column w-100">
+    <h4 class = "text-center mb-4"> Customise The Look Of The Device
+
+      <!-- List of possible font colours that trigger a message to the server below -->
+    <h5 class ="text-center"> Select Font Colour </h5>
+  <div class ="d-flex flex-row justify-content-center align-items-center">
+  <button class="btn red whiteFont mr-1" onclick="redFont()"></button>
+  <button class="btn orange whiteFont mr-1" onclick="orangeFont()"></button>
+  <button class="btn yellow mr-1" onclick="yellowFont()"></button>
+  <button class="btn green whiteFont mr-1" onclick="greenFont()"></button>
+  <button class="btn blue whiteFont" onclick="blueFont()"></button>
   </div>
-</div>
-
-<div id ="customTab">
-  <div id ="customTabHeader" class= "d-flex justify-content-between align-items-center">
-          <h4 class ="blackFont ml-2"> CustomiseDevice.exe </h4>
-     <img src ="/img/closeButton.png">
+  <div class ="d-flex flex-row justify-content-center align-items-center mt-3">
+  <button class="btn pink whiteFont mr-1" onclick="pinkFont()"></button>
+  <button class="btn purple whiteFont mr-1" onclick="purpleFont()"></button>
+  <button class="btn black whiteFont mr-1" onclick="blackFont()"></button>
+  <button class="btn white" onclick="whiteFont()"></button>
   </div>
-<div id ="customTabContent" class ="d-flex justify-content-center align-items-center">
 
-<div class ="d-flex flex-column w-100">
-  <h4 class = "text-center mb-4"> Customise The Look Of The Device
-  <h5 class ="text-center"> Select Font Colour </h5>
-<div class ="d-flex flex-row justify-content-center align-items-center">
-<button class="btn red whiteFont mr-1" onclick="redFont()"></button>
-<button class="btn orange whiteFont mr-1" onclick="orangeFont()"></button>
-<button class="btn yellow mr-1" onclick="yellowFont()"></button>
-<button class="btn green whiteFont mr-1" onclick="greenFont()"></button>
-<button class="btn blue whiteFont" onclick="blueFont()"></button>
-</div>
-<div class ="d-flex flex-row justify-content-center align-items-center mt-3">
-<button class="btn pink whiteFont mr-1" onclick="pinkFont()"></button>
-<button class="btn purple whiteFont mr-1" onclick="purpleFont()"></button>
-<button class="btn black whiteFont mr-1" onclick="blackFont()"></button>
-<button class="btn white" onclick="whiteFont()"></button>
-</div>
-
-<h5 class ="text-center mt-5"> Select Background Colour </h5>
-<div class ="d-flex flex-row justify-content-center align-items-center">
-<button class="btn red whiteFont mr-1" onclick="redBg()"></button>
-<button class="btn orange whiteFont mr-1" onclick="orangeBg()"></button>
-<button class="btn yellow mr-1 mr-1" onclick="yellowBg()"></button>
-<button class="btn green whiteFont mr-1" onclick="greenBg()"></button>
-<button class="btn blue whiteFont" onclick="blueBg()"></button>
-</div>
-<div class ="d-flex flex-row justify-content-center align-items-center mt-3">
-<button class="btn pink whiteFont mr-1" onclick="pinkBg()"></button>
-<button class="btn purple whiteFont mr-1" onclick="purpleBg()"></button>
-<button class="btn black whiteFont mr-1" onclick="blackBg()"></button>
-<button class="btn white" onclick="whiteBg()"></button>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Socket.io Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-<script>
-var socket = io();
-function redFont() {
-  socket.emit('redFont');
-  console.log("Sent Red Font");
-}
-function orangeFont() {
-  socket.emit('orangeFont');
-  console.log("Sent Orange Font");
-}
-function yellowFont() {
-  socket.emit('yellowFont');
-  console.log("Sent Yellow Font");
-}
-function greenFont() {
-  socket.emit('greenFont');
-  console.log("Sent Green Font");
-}
-function blueFont() {
-  socket.emit('blueFont');
-  console.log("Sent Blue Font");
-}
-function pinkFont() {
-  socket.emit('pinkFont');
-  console.log("Sent Pink Font");
-}
-function purpleFont() {
-  socket.emit('purpleFont');
-  console.log("Sent Purple Font");
-}
-function blackFont() {
-  socket.emit('blackFont');
-  console.log("Sent Black Font");
-}
-function whiteFont() {
-  socket.emit('whiteFont');
-  console.log("Sent White Font");
-}
-
-function redBg() {
-  socket.emit('redBg');
-  console.log("Sent Red Bg");
-}
-function orangeBg() {
-  socket.emit('orangeBg');
-  console.log("Sent Orange Bg");
-}
-function yellowBg() {
-  socket.emit('yellowBg');
-  console.log("Sent Yellow Bg");
-}
-function greenBg() {
-  socket.emit('greenBg');
-  console.log("Sent Green Bg");
-}
-function blueBg() {
-  socket.emit('blueBg');
-  console.log("Sent Blue Bg");
-}
-function pinkBg() {
-  socket.emit('pinkBg');
-  console.log("Sent Pink Bg");
-}
-function purpleBg() {
-  socket.emit('purpleBg');
-  console.log("Sent Purple Bg");
-}
-function blackBg() {
-  socket.emit('blackBg');
-  console.log("Sent Black Bg");
-}
-function whiteBg() {
-  socket.emit('whiteBg');
-  console.log("Sent White Bg");
-}
-</script>
-
-</div>
-
-<div class="d-flex justify-content-center pt-5">
- <a href="#seeLocation"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
-</div>
-
-</section>
-
-<section id ="seeLocation" class= "d-flex flex-column align-items-center">
-  <div class="d-flex justify-content-center mb-4">
-   <a href="#sendMessage"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
+  <!-- List of possible background colours that trigger a message to the server below -->
+  <h5 class ="text-center mt-5"> Select Background Colour </h5>
+  <div class ="d-flex flex-row justify-content-center align-items-center">
+  <button class="btn red whiteFont mr-1" onclick="redBg()"></button>
+  <button class="btn orange whiteFont mr-1" onclick="orangeBg()"></button>
+  <button class="btn yellow mr-1 mr-1" onclick="yellowBg()"></button>
+  <button class="btn green whiteFont mr-1" onclick="greenBg()"></button>
+  <button class="btn blue whiteFont" onclick="blueBg()"></button>
   </div>
-  <h2 class="text-center"> C:\WatchYourWearables> Live GPS of Device...</h2>
-
-  <div id ="gpsTab" class ="mt-3">
-    <div id ="gpsTabHeader" class= "d-flex justify-content-between align-items-center">
-            <h4 class ="blackFont ml-2"> LocationTrackingDevice.exe </h4>
-       <img src ="/img/closeButton.png">
-    </div>
-<div id ="gpsTabContent" class ="d-flex flex-column justify-content-center align-items-center">
-
-  <h3>Live Location of Device</h3>
-  <!--The div element for the map -->
-  <div id="map"></div>
-  <p> Map updates every 10 seconds </p>
+  <div class ="d-flex flex-row justify-content-center align-items-center mt-3">
+  <button class="btn pink whiteFont mr-1" onclick="pinkBg()"></button>
+  <button class="btn purple whiteFont mr-1" onclick="purpleBg()"></button>
+  <button class="btn black whiteFont mr-1" onclick="blackBg()"></button>
+  <button class="btn white" onclick="whiteBg()"></button>
+  </div>
 
   </div>
-</div>
+  </div>
+  </div>
+  </div>
 
-
-<!-- Server to Client Sending GPS Data via Socket.io  -->
-<script>
-// Initialise socket.io client side connection
-var lat;
-var lon;
-
-var socket = io();
+  <!-- Socket.io Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script>
+  // Message triggers from above selections
+  var socket = io();
   function sendData() {
     // Get text input from form
     var data = document.getElementById('customMsg').value;
-    // Trigger server side sendMsg function and send 'data'
+    // Trigger server side sendMsg function and send 'data' aka custom message for device
     socket.emit('sendMsg', data)
-}
+  }
+  function redFont() {
+    socket.emit('redFont');
+    console.log("Sent Red Font");
+  }
+  function orangeFont() {
+    socket.emit('orangeFont');
+    console.log("Sent Orange Font");
+  }
+  function yellowFont() {
+    socket.emit('yellowFont');
+    console.log("Sent Yellow Font");
+  }
+  function greenFont() {
+    socket.emit('greenFont');
+    console.log("Sent Green Font");
+  }
+  function blueFont() {
+    socket.emit('blueFont');
+    console.log("Sent Blue Font");
+  }
+  function pinkFont() {
+    socket.emit('pinkFont');
+    console.log("Sent Pink Font");
+  }
+  function purpleFont() {
+    socket.emit('purpleFont');
+    console.log("Sent Purple Font");
+  }
+  function blackFont() {
+    socket.emit('blackFont');
+    console.log("Sent Black Font");
+  }
+  function whiteFont() {
+    socket.emit('whiteFont');
+    console.log("Sent White Font");
+  }
 
-socket.on('updateLocation', (latVal, lonVal) => {
-console.log("Latitude:" + latVal + "Longitude:" + lonVal);
-deviceLat = latVal;
-deviceLon = lonVal;
-initMap(deviceLat,deviceLon);
-});
+  function redBg() {
+    socket.emit('redBg');
+    console.log("Sent Red Bg");
+  }
+  function orangeBg() {
+    socket.emit('orangeBg');
+    console.log("Sent Orange Bg");
+  }
+  function yellowBg() {
+    socket.emit('yellowBg');
+    console.log("Sent Yellow Bg");
+  }
+  function greenBg() {
+    socket.emit('greenBg');
+    console.log("Sent Green Bg");
+  }
+  function blueBg() {
+    socket.emit('blueBg');
+    console.log("Sent Blue Bg");
+  }
+  function pinkBg() {
+    socket.emit('pinkBg');
+    console.log("Sent Pink Bg");
+  }
+  function purpleBg() {
+    socket.emit('purpleBg');
+    console.log("Sent Purple Bg");
+  }
+  function blackBg() {
+    socket.emit('blackBg');
+    console.log("Sent Black Bg");
+  }
+  function whiteBg() {
+    socket.emit('whiteBg');
+    console.log("Sent White Bg");
+  }
+  </script>
 
-// Initialize and add the map
-function initMap(deviceLat, deviceLon) {
-// The location of Uluru
-// var uluru = {lat: -25.344, lng: 131.036};
-var arduinoLocation = {lat: deviceLat, lng: deviceLon};
-// The map, centered at Uluru
-var map = new google.maps.Map(
-  document.getElementById('map'), {zoom: 15, center: arduinoLocation});
-// The marker, positioned at Uluru
-var marker = new google.maps.Marker({position: arduinoLocation, map: map});
-}
+  </div>
 
-</script>
+  <!-- Smooth scrolling chevron to next page section using fontawesome for icons -->
+  <div class="d-flex justify-content-center pt-5">
+   <a href="#seeLocation" class="smoothScroll"><i class="fas fa-chevron-down whiteFont text-center"></i>  </a>
+  </div>
 
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyL7KSlLjfhj_8wb3MDTdh49EX1hr-zW8&callback=initMap">
-</script>
+  </section>
+
+  <!-- GPS Tracker Page -------------------------------------------------------------------------------------------------------->
+  <!-- Flexbox Positioning -->
+  <section id ="seeLocation" class= "d-flex flex-column align-items-center">
+    <!-- Smooth scrolling chevron to previous page section using fontawesome for icons -->
+    <div class="d-flex justify-content-center mb-4">
+     <a href="#sendMessage" class="smoothScroll"><i class="fas fa-chevron-up whiteFont text-center"></i>  </a>
+    </div>
+    <h2 class="text-center"> C:\WatchYourWearables> Live GPS of Device...</h2>
+
+    <div id ="gpsTab" class ="mt-3">
+      <div id ="gpsTabHeader" class= "d-flex justify-content-between align-items-center">
+              <h4 class ="blackFont ml-2"> LocationTrackingDevice.exe </h4>
+         <img src ="/img/closeButton.png">
+      </div>
+  <div id ="gpsTabContent" class ="d-flex flex-column justify-content-center align-items-center">
+
+    <h3>Live Location of Device</h3>
+    <!--Div for the google map api to sit in-->
+    <div id="map"></div>
+    <p> Map updates every 10 seconds </p>
+
+    </div>
+  </div>
+
+
+  <!-- Server to Client Sending GPS Data via Socket.io  -->
+  <script>
+
+  // Initialise socket.io client side connection
+  var socket = io();
+  // On message from server, grab the variable data
+  socket.on('updateLocation', (latVal, lonVal) => {
+  // console.log("Latitude:" + latVal + "Longitude:" + lonVal); //Uncomment for coordinate feed
+  // Store given data into variable
+  deviceLat = latVal;
+  deviceLon = lonVal;
+  // Trigger google map api
+  initMap(deviceLat,deviceLon);
+  });
+
+  // Initialize and add the map
+  function initMap(deviceLat, deviceLon) {
+  // var static = {lat: -25.344, lng: 131.036}; //Static location for debugging
+  // Putting arduino data into a variable
+  var arduinoLocation = {lat: deviceLat, lng: deviceLon};
+  // The map, centered at arduino's location
+  var map = new google.maps.Map(
+    // Zoom in on location
+    document.getElementById('map'), {zoom: 15, center: arduinoLocation});
+  // Marker positioned at location
+  var marker = new google.maps.Marker({position: arduinoLocation, map: map});
+  }
+
+  </script>
+
+  <!-- Google maps api -->
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyL7KSlLjfhj_8wb3MDTdh49EX1hr-zW8&callback=initMap">
+  </script>
